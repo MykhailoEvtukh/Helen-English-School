@@ -881,6 +881,7 @@ input[type="radio"].visually-hidden {
   width: 280px;
   box-shadow: 4px 7px 24px 8px rgba(29, 29, 27, 0.11);
   padding: 94px 16px 26px;
+  transition: transform 1000ms, background-color 500ms ease-in-out, color 3000ms;
 }
 
 .features-list_item:not(:last-of-type) {
@@ -933,6 +934,7 @@ input[type="radio"].visually-hidden {
 
 .features-list_item:hover {
   background-color: #ff6b08;
+  transform: scale(1.05);
 }
 
 .features-list_item:hover .section-subtitle--features {
@@ -1818,7 +1820,7 @@ input[type="radio"].visually-hidden {
     margin-right: 24px;
   }
 
-  .features-list_item:nth-of-type(-n+4) {
+  .features-list_item:nth-of-type(-n + 4) {
     margin-bottom: 22px;
   }
 
@@ -2407,7 +2409,7 @@ input[type="radio"].visually-hidden {
     margin-right: 0;
   }
 
-  .features-list_item:nth-of-type(-n+4) {
+  .features-list_item:nth-of-type(-n + 4) {
     margin-bottom: 0;
   }
 
@@ -2415,7 +2417,7 @@ input[type="radio"].visually-hidden {
     margin-right: 20px;
   }
 
-  .features-list_item:nth-of-type(-n+3) {
+  .features-list_item:nth-of-type(-n + 3) {
     margin-bottom: 18px;
   }
 
