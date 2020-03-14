@@ -1,0 +1,36 @@
+@mixin center-flex($type: 'all') {
+    display: flex;
+    @if $type== 'all' {
+      justify-content: center;
+      align-items: center;
+    } @else if $type== 'hor' {
+      justify-content: center;
+    } @else if $type== 'ver' {
+      align-items: center;
+    }
+  }
+  @mixin primary-font-settings($size: 14px, $height: 17px) {
+    font-size: $size;
+    line-height: height;
+  }
+  @mixin secondary-font-settings($size: 15px, $height: 24px) {
+    font-size: $size;
+    line-height: height;
+  }
+  @mixin bg-image($path: '', $size: cover, $repeat: no-repeat, $pos: center) {
+    background-image: url($path);
+    background-size: $size;
+    background-repeat: $repeat;
+    background-position: $pos;
+  }
+  @mixin pseudo($dispay: inline-block, $content: '') {
+    display: $dispay;
+    content: $content;
+  }
+  @mixin auto {
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+  

@@ -1,0 +1,368 @@
+.registration {
+  background-image: url(../images/bg_registration.png);
+  opacity: 0.9;
+  @extend %bg-image;
+}
+
+@media (device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .registration {
+    background-image: url(../images/bg_registration@2x.png);
+  }
+}
+
+.registration__title {
+  font-size: 14px;
+  font-family: $norm700;
+  color: $primary-light-color;
+  line-height: 1.86;
+  text-align: center;
+  width: 230px;
+  padding-top: 48px;
+  margin: 0 auto 16px;
+}
+
+.registration__title span {
+  color: $main-orange-color;
+}
+
+.registration__description {
+  font-size: 11px;
+  font-family: $norm600;
+  line-height: 1.818;
+  text-align: center;
+  color: $primary-light-color;
+  width: 235px;
+  margin: 0 auto 24px;
+
+  &-color {
+    color: $main-orange-color;
+  }
+}
+
+.wrap_form {
+  padding-bottom: 58px;
+}
+
+.registration__form {
+  width: 280px;
+  margin: 0 auto;
+
+  &-name,
+  &-tel {
+    background-color: transparent;
+    font-family: $norm400;
+    font-size: 13px;
+    line-height: 2.885;
+    letter-spacing: 1.43px;
+    border: 1px solid $primary-light-color;
+    width: 280px;
+    height: 50px;
+    margin-bottom: 20px;
+    color: $primary-light-color;
+    padding-left: 22px;
+
+    &::placeholder {
+      color: $primary-light-color;
+      font-family: $norm600;
+    }
+  }
+
+  &-btn {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 250px;
+    font-size: 12px;
+    line-height: 4.2;
+    letter-spacing: 0.9px;
+    font-family: $btn, sans-serif;
+    text-transform: uppercase;
+    color: $primary-light-color;
+    background-color: $main-orange-color;
+    border: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $main-orange-hover;
+      transition: all 0.2s linear;
+    }
+  }
+}
+
+.registration__form-tel {
+  margin-bottom: 55px;
+}
+
+.registration__form button {
+  margin: 0 auto;
+}
+
+// CONSULTATION
+
+.consultation {
+  margin-bottom: 14px;
+
+  &__phone {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding-top: 34px;
+    margin-bottom: 20px;
+
+    &-svg {
+      width: 20px;
+      height: 20px;
+      margin: auto 0 8px;
+    }
+  }
+}
+
+.consultation__phone a {
+  font-size: 18px;
+  line-height: 1.875;
+  font-family: $norm600;
+  color: black;
+  margin-left: 8px;
+}
+
+.consultation__instagram {
+  display: block;
+  margin-bottom: 20px;
+
+  &-svg {
+    width: 37px;
+    height: 37px;
+    margin: 0 auto;
+  }
+}
+
+.consultation__logo {
+  font-size: 15px;
+  font-family: $norm800;
+  color: $logo-dark-color;
+  width: 80px;
+  margin: 0 auto;
+  text-align: center;
+
+  &-fire {
+    fill: $main-orange-color;
+    width: 17px;
+    height: 22px;
+
+    &-tablet {
+      display: none;
+    }
+  }
+
+  &-en {
+    font-size: 15px;
+    font-family: $norm800;
+    color: $logo-dark-color;
+    text-transform: uppercase;
+  }
+
+  &-description {
+    display: block;
+    font-size: 5.3px;
+    font-family: $norm700;
+    color: $main-orange-color;
+    text-transform: uppercase;
+
+    & span {
+      color: $logo-dark-color;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 688px;
+  }
+
+  .registration {
+    background-image: url(../images/bg_registration_tablet.png);
+  }
+
+  @media (device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .registration {
+      background-image: url(../images/bg_registration_tablet@2x.png);
+    }
+  }
+
+  .registration__title {
+    font-size: 22px;
+    font-family: $norm800;
+    line-height: 1.729;
+    width: 545px;
+    padding-top: 58px;
+    margin-bottom: 24px;
+  }
+
+  .registration__description {
+    font-size: 15px;
+    line-height: 1.333;
+    text-align: left;
+    width: 455px;
+    margin-bottom: 29px;
+
+    &-aline {
+      display: block;
+      color: $primary-light-color;
+    }
+  }
+
+  .wrap_form {
+    padding-bottom: 64px;
+  }
+
+  .registration__form {
+    width: 400px;
+
+    &-name,
+    &-tel {
+      width: 400px;
+    }
+  }
+
+  .registration__form-tel {
+    margin-bottom: 35px;
+  }
+
+  // CONSULTATION
+
+  .consultation {
+    .container {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+  }
+
+  .consultation {
+    margin-bottom: 30px;
+    padding-top: 32px;
+  }
+
+  .logo-link {
+    display: inline-flex;
+  }
+
+  .consultation__phone {
+    margin-left: 80px;
+
+    &a {
+      font-size: 20px;
+      line-height: 1.875;
+    }
+  }
+
+  .consultation__instagram {
+    order: -1;
+    margin: 0 0 0 30px;
+    padding: 0 0 0 30px;
+    border-left: 1px solid $tertiary-grey-color;
+  }
+
+  .consultation__logo {
+    font-size: 25px;
+    width: 128px;
+
+    &-fire {
+      width: 22px;
+      height: 38px;
+      margin-left: -4px;
+
+      &-mob,
+      &-desktop {
+        display: none;
+      }
+
+      &-tablet {
+        display: initial;
+      }
+    }
+
+    &-en {
+      font-size: 25px;
+    }
+
+    &-description {
+      font-size: 8.75px;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    width: 1210px;
+  }
+
+  .registration {
+    background-image: url(../images/bg_registration_desktop.png);
+  }
+
+  @media (device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .registration {
+      background-image: url(../images/bg_registration_desktop@2x.png);
+    }
+  }
+
+  .registration__title {
+    font-size: 37.5px;
+    line-height: 1.334;
+    width: 930px;
+    padding-top: 80px;
+    margin-bottom: 40px;
+  }
+
+  .registration__description {
+    font-size: 18px;
+    line-height: 1.361;
+    text-align: center;
+    width: 540px;
+    margin-bottom: 40px;
+  }
+
+  .wrap_form {
+    padding-bottom: 88px;
+  }
+
+  .registration__form {
+    width: 620px;
+
+    &-name,
+    &-tel {
+      font-size: 21px;
+      line-height: 1.8;
+      letter-spacing: 1.05px;
+      border: 1px solid $primary-light-color;
+      width: 620px;
+      height: 72px;
+      margin-bottom: 20px;
+      padding-left: 28px;
+    }
+
+    &-btn {
+      width: 350px;
+      font-size: 14px;
+      line-height: 4.9;
+    }
+  }
+  
+  .registration__form-tel {
+    margin-bottom: 56px;
+  }
+
+  // CONSULTATION
+
+  .consultation__phone {
+    margin-left: 272px;
+
+    &a {
+      font-size: 27px;
+      line-height: 1.385;
+    }
+  }
+}

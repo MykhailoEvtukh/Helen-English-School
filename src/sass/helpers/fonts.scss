@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Montserrat400';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+         url('../fonts/montserrat-v14-cyrillic_latin-regular.woff2') format('woff2'),
+         url('../fonts/montserrat-v14-cyrillic_latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat500';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Montserrat Medium'), local('Montserrat-Medium'),
+         url('../fonts/montserrat-v14-cyrillic_latin-500.woff2') format('woff2'),
+         url('../fonts/montserrat-v14-cyrillic_latin-500.woff') format('woff'); 
+}
+
+@font-face {
+    font-family: 'Montserrat600';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+         url('../fonts/montserrat-v14-cyrillic_latin-600.woff2') format('woff2'),
+         url('../fonts/montserrat-v14-cyrillic_latin-600.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat700';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Montserrat Bold'), local('Montserrat-Bold'),
+         url('../fonts/montserrat-v14-cyrillic_latin-700.woff2') format('woff2'),
+         url('../fonts/montserrat-v14-cyrillic_latin-700.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat800';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'),
+         url('../fonts/montserrat-v14-cyrillic_latin-800.woff2') format('woff2'),
+         url('../fonts/montserrat-v14-cyrillic_latin-800.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Tahoma';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''), local(''),
+    url('../fonts/Tahoma-Bold.woff2') format('woff2'),
+    url('../fonts/Tahoma-Bold.woff') format('woff');
+}

@@ -1,0 +1,203 @@
+.section-title--teacher {
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.wrapper-teacher-photo {
+    margin-bottom: 18px;
+}
+
+.teacher {
+    padding: 240px 0 22px 0;
+
+    &__name {
+        font-size: 16px;
+        font-family: $norm800;
+        color: $secondary-dark-color;
+        line-height: 29px;
+        letter-spacing: 0.8px;
+        margin-bottom: 24px;
+
+        &::after {
+            @extend %pseudo;
+            background-color: $tertiary-background-color;
+            width: 280px;
+            height: 1px;
+        }
+    }
+
+    &__skills-list {
+        margin-bottom: 20px;
+
+        &-item {
+            font-size: 13px;
+            font-family: $norm700;
+            color: $secondary-dark-color;
+            line-height: 20px;
+            letter-spacing: 0.65px;
+            padding-left: 34px;
+            position: relative;
+
+            &::before {
+                @extend %pseudo;
+                background-image: url("../images/icon-Check.svg");
+                @extend %bg-image;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                left: 0;
+                top: 4px;
+            }
+
+            &:not(:last-of-type) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__description-list {
+        padding: 0 15px 0 15px;
+
+        &-item {
+            font-size: 11px;
+            font-family: $norm400;
+            color: $secondary-grey-color;
+            line-height: 20px;
+            letter-spacing: 0.55px;
+            margin-bottom: 18px;
+
+            &--one::before {
+                @extend %pseudo;
+                background-color: $main-orange-color;
+                width: 25px;
+                height: 2px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    &__link {
+        font-size: 11px;
+        font-family: $norm400;
+        color: $main-orange-color;
+        text-decoration: underline;
+        line-height: 29px;
+        text-align: center;
+        letter-spacing: 0.55px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {  
+        width: 688px;
+    }
+
+    .section-title--teacher {
+        font-size: 26px;
+        line-height: 63px;
+        text-align: left;
+        letter-spacing: 1.3px;
+        margin-bottom: 14px;
+    }
+
+    .wrapper-teacher {
+        display: flex;
+
+        &-photo {
+            margin-right: 44px;
+            margin-bottom: 0;
+        }
+
+        &-text {
+            width: 398px;
+        }
+    }
+
+    .teacher {
+        &__name {
+            font-size: 20px;
+            line-height: 29px;
+            letter-spacing: 1px;
+    
+            &::after {
+                width: 398px;
+                margin-top: 8px;
+            }
+        }
+
+        &__skills-list {
+            padding-right: 24px;
+        }
+
+        &__description-list {
+            padding: 0;
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+       width: 1210px;
+    }
+
+    .teacher {
+        padding: 90px 0 45px 0;
+
+        &__name {
+            font-size: 29px;
+            line-height: 29px;
+            letter-spacing: 1.5px;
+
+            &::after {
+                width: 632px;
+            }
+        }
+
+        &__skills-list {
+            padding-right: 44px;
+            margin-bottom: 30px;
+
+            &-item {
+                font-size: 17px;
+                line-height: 29px;
+                letter-spacing: 0.75px;
+                padding-left: 48px;
+
+                &::before {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+
+        &__description-list-item {
+            font-size: 17px;
+            line-height: 29px;
+            letter-spacing: 0.75px;
+            margin-bottom: 24px;
+        }
+
+        &__link {
+            font-size: 17px;
+            line-height: 29px;
+            text-align: left;
+            letter-spacing: 0.75px;
+        }
+    }
+
+    .section-title--teacher {
+        font-size: 42px;
+        letter-spacing: 2.1px;
+        margin-bottom: 44px;
+    }
+
+    .wrapper-teacher {
+        &-photo {
+            margin-right: 84px;
+        }
+
+        &-text {
+            width: 632px;
+        }
+    }  
+}

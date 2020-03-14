@@ -1,0 +1,33 @@
+  %bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+ 
+  %flex-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  %flex-center {
+    display: flex;
+    justify-content: center;
+  }
+  
+  %flex-between {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  %flex-center-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  %pseudo {
+    display: block;
+    content: '';
+  }
+  

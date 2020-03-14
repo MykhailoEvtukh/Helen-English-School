@@ -1,0 +1,460 @@
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.header__btn-tel {
+    display: none;
+}
+
+.navigation__list {
+    display: none;
+}
+
+.overlay {
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 0;
+    background-color: $overlay-background-color;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    transition: all .4s linear;
+}
+
+.overlay * {
+    opacity: 0;
+    transition: all .1s linear .5s;
+}
+
+.overlay_active {
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+    padding: 24px 0 218px;
+    * {
+        opacity: 1;
+    }
+}
+
+.submenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+
+    &-btn {
+        background-color: transparent;
+        border: none;
+        background-image: url(../images/burger-sub.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 24px;
+        height: 18px;
+    }
+
+    &__list {
+        width: 236px;
+        margin: 0 auto 60px;
+        &_link {
+            font-family: $norm700;
+            font-size: 20px;
+            line-height: 38px;
+            color: $primary-light-color;
+            &:hover {
+                color: $main-orange-color;
+            }
+        }
+    }
+    
+    &-button {
+        display: block;
+        margin: 0 auto;
+        width: 250px;
+        height: 48px;
+        background-color: transparent;
+        border: 2px solid $main-orange-color;
+        font-family: $norm600;
+        font-size: 11px;
+        text-transform: uppercase;
+        color: $main-orange-color;
+    }
+}
+.animation {
+    animation: animation 0.9s linear;
+}
+
+@keyframes animation {
+    from {
+      -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0)
+        rotate3d(0, 1, 0, -360deg);
+      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    40% {
+      -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+        rotate3d(0, 1, 0, -190deg);
+      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+        rotate3d(0, 1, 0, -190deg);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    50% {
+      -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+        rotate3d(0, 1, 0, -170deg);
+      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+        rotate3d(0, 1, 0, -170deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    80% {
+      -webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0)
+        rotate3d(0, 1, 0, 0deg);
+      transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0)
+        rotate3d(0, 1, 0, 0deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    to {
+      -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0)
+        rotate3d(0, 1, 0, 0deg);
+      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+  }
+
+.header {
+    padding: 30px 0 0;
+    margin-bottom: 56px;
+    min-width: 320px;
+
+    &__btn-burger {
+        width: 24px;
+        height: 12px;
+        border: none;
+        background-color: transparent;
+        background-image: url(../images/burger1.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+   &-section {
+       min-height: 536px;
+        padding: 0 0 310px;
+        position: relative;
+        background-image: url(../images/Pic1.png), url(../images/Shape1.png);
+        background-repeat: no-repeat;
+        background-position: center bottom 86px, center bottom;
+
+        &__btn {
+            display: block;
+            margin: 0 auto;
+            font-family: $btn, sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: $primary-light-color;
+            line-height: 4.2;
+            letter-spacing: 0.9px;
+            width: 250px;
+            height: 48px;
+            border: none;
+            background-color: $main-orange-color;
+            position: relative;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+              background-color: $main-orange-hover;
+              transition: all 0.2s linear;
+            }
+        }
+
+        &__description {
+            font-family: $norm500;
+            font-size: 15px;
+            margin-bottom: 36px;
+        }
+
+        &__title {
+            font-family: $norm800;
+            font-size: 20px;
+            letter-spacing: 1px;
+            margin-bottom: 36px;
+            width: 80%;
+
+            &-text {
+                font-family: $norm500;
+                font-size: 15px;
+                color: $primary-grey-color;
+            }
+        }
+    }
+}
+
+.navigation {
+   @extend %flex-center-between;
+}
+
+.header-section__description span {
+    color: $main-orange-color;
+}
+
+.services {
+    padding-bottom: 54px;
+
+    &__list {
+        padding-left: 88px;
+
+        &-item {
+            font-family: $norm700;
+            font-size: 13px;
+            line-height: 20px;
+            display: block;
+            width: 132px;
+            margin: auto;
+            position: relative;
+        }
+
+    }
+}
+
+.services__list-item:not(:last-of-type) {
+    margin-bottom: 32px;
+}
+
+.student::before {
+    position: absolute;
+    display: block;
+    content: "";
+    background-image: url(../images/Student1.png);
+    width: 115px;
+    height: 58px;
+    z-index: -1;
+    top: 3px;
+    left: -67px;
+}
+
+.learning::before {
+    position: absolute;
+    display: block;
+    content: "";
+    background-image: url(../images/Learning1.png);
+    width: 115px;
+    height: 58px;
+    z-index: -1;
+    top: 3px;
+    left: -67px;
+}
+
+.umbrella::before {
+    position: absolute;
+    display: block;
+    content: "";
+    background-image: url(../images/umbrella1.png);
+    width: 115px;
+    height: 58px;
+    z-index: -1;
+    top: 3px;
+    left: -67px;
+}
+
+@media (min-width: 768px) {
+    .submenu-button {
+        display: none;
+    }
+
+    .submenu__list {
+        width: 334px;
+
+        &t_link {
+            font-size: 26px;
+            line-height: 42px;
+        }
+    }
+
+    .header {
+        padding: 38px 0 0;
+        margin-bottom: 82px;
+        min-width: 768px;
+
+        &__btn-tel {
+            display: block;
+            width: 250px;
+            height: 48px;
+            margin-left: 293px;
+            margin-right: 30px;
+            background-color: transparent;
+            border: 2px solid $main-orange-color;
+            font-family: $btn, sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: $main-orange-color;
+
+            &:hover,
+            &:focus {
+              background-color: $main-orange-color;
+              transition: all 0.2s linear;
+              color: #ffffff;
+            }
+        }
+
+        &-section {
+            padding: 0;
+            line-height: 22px;
+            background-image: url(../images/Pic2.png), url(../images/Shape2.png);
+            background-repeat: no-repeat;
+            background-position: right top 62px, center bottom;
+
+            &__title {
+                width: 278px;
+                font-size: 26px;
+                line-height: 34px;
+                margin-bottom: 28px;
+            }
+
+            &__description {
+                width: 282px;
+            }
+
+            &__btn {
+                margin-left: 0;
+            }
+        }
+    }
+    .services {
+        padding-bottom: 52px;
+
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 67px;
+
+            &-item {
+                margin: 0;
+            }
+        }
+    }
+
+    .services__list-item:not(:last-of-type) {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    .header {
+        padding-top: 46px;
+        margin-bottom: 124px;
+    }
+
+    .header__btn-burger {
+        display: none;
+    }
+
+    .header-section{
+        min-height: 716px;
+        background-image: url(../images/Pic3.png), url(../images/Shape2.png);
+        background-size: auto, cover;
+        background-position: right top 62px, center bottom;
+    }
+
+    .header__btn-tel {
+        margin-left: 46px;
+    }
+
+    .navigation__list {
+        width: 566px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 338px;
+    }
+
+    .list_link {
+        font-family: $norm500;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $primary-grey-color;
+        transition: all 200ms linear;
+        &:hover {
+            color: $main-orange-color;
+        }
+    }
+
+    .header-section__title {
+        width: 494px;
+        font-size: 48px;
+        line-height: 52px;
+        margin-bottom: 36px;
+        &-text {
+            font-size: 18px;
+        }
+    }
+
+    .header-section__description {
+        margin-bottom: 68px;
+        font-size: 18px;
+        width: 462px;
+    }
+
+    .header-section__btn {
+        width: 300px;
+        height: 68px;
+        font-size: 14px;
+    }
+
+    .header-section::after {
+        top: 44px;
+    }
+
+    .services {
+        padding: 40px 0 84px;
+
+        &__list {
+            padding-left: 85px;
+
+            &-item {
+                font-size: 18px;
+                line-height: 28px;
+                width: 296px;
+            }
+        }
+    }
+
+    .student::before {
+        background-image: url(../images/Student2.png);
+        width: 208px;
+        height: 104px;
+        top: -27px;
+        left: -85px;
+    }
+
+    .learning::before {
+        background-image: url(../images/Learning2.png);
+        width: 208px;
+        height: 104px;
+        top: -27px;
+        left: -85px;
+    }
+    
+    .umbrella::before {
+        background-image: url(../images/umbrella2.png);
+        width: 208px;
+        height: 104px;
+        top: -27px;
+        left: -85px;
+    }
+}

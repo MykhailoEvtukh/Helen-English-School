@@ -1,0 +1,130 @@
+.container {
+    width: 280px;
+    margin: auto;
+}
+
+.background-guaranty {
+    background-color: $primary-background-color;
+}
+
+.section-title--guaranty {
+    margin-bottom: 20px;
+}
+
+.guaranty {
+    padding-top: 22px;
+
+    &__list {
+        position: relative;
+        padding: 24px 0 24px 0;
+
+        &::before {
+            @extend %pseudo;
+            border-left: 1px dotted $secondary-element-color;
+            height: 330px;
+            position: absolute;
+            left: 7px;
+            top: 28px;
+        }
+
+        &-item {
+            width: 275px;
+            font-size: 11px;
+            font-family: $norm500;
+            color: $primary-dark-color;
+            line-height: 20px;
+            letter-spacing: 0.55px;
+            padding-left: 36px;
+            position: relative;
+
+            &::before {
+                @extend %pseudo;
+                background-image: url("../images/icon-fire.svg");
+                @extend %bg-image;
+                width: 16px;
+                height: 24px;
+                position: absolute;
+                left: 0;
+            }
+
+            span {
+                color: $main-orange-color;
+            }
+
+            &:not(:last-of-type) {
+                margin-bottom: 26px;
+            }
+        }
+    } 
+}
+
+@media (min-width: 768px) {
+    .container {  
+        width: 688px;
+    }
+
+    .section-title--guaranty {
+        font-size: 26px;
+        line-height: 63px;
+        letter-spacing: 1.3px;
+        margin-bottom: 10px;
+    }
+
+    .background-guaranty {
+        background-color: transparent;
+    }
+
+    .guaranty__list {
+        padding: 30px 50px 30px 60px;
+        background-color: $primary-background-color;
+
+        &::before {
+            height: 212px;
+            left: 67px;
+            top: 32px;
+        }
+
+        &-item {
+            width: 100%;
+        }
+    }
+
+}
+
+@media (min-width: 1280px) {
+    .container {
+       width: 1210px;
+    }
+
+    .section-title--guaranty {
+        font-size: 42px;
+        letter-spacing: 2.1px;
+        margin-bottom: 30px;
+    }
+
+    .guaranty__list {
+        padding: 44px 132px 44px 112px;
+
+        &::before {
+            height: 270px;
+            left: 122px;
+            top: 48px;
+        }
+
+        &-item {
+            font-size: 18px;
+            line-height: 29px;
+            letter-spacing: 0.9px;
+            padding-left: 56px;
+
+            &::before {
+                width: 24px;
+                height: 32px;
+            }
+
+            span {
+                display: inline-block;
+            }
+        }
+    }
+}

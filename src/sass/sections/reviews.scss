@@ -1,0 +1,392 @@
+.reviews {
+  margin: 0 auto;
+}
+
+.reviews-wrap {
+  margin: 0 auto;
+}
+
+.reviews {
+  .container {
+    position: relative;
+  }
+}
+
+.reviews-title {
+  font-size: 20px;
+  font-family: $norm700;
+  color: #111517;
+  line-height: 1.327;
+  padding: 46px 50px 0;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.reviews__card-student {
+  width: 280px;
+  padding: 0 28px 0;
+  height: auto;
+  background-color: #ffffff;
+  box-shadow: 4px 6.928px 34.96px 11.04px #1d1d1b17;
+  margin: 0 auto;
+
+  &-photo {
+    padding-top: 22px;
+    margin: 0 auto;
+    padding-bottom: 16px;
+    width: 80px;
+
+    &-desktop {
+      display: none;
+    }
+  }
+
+  &-social {
+    width: 220px;
+    height: 25px;
+    margin-bottom: 10px;
+  }
+
+  &-name {
+    font-size: 13px;
+    font-family: $norm700;
+    color: #ff6b08;
+    line-height: 2.244;
+    text-align: center;
+  }
+
+  &-learned {
+    font-size: 11px;
+    font-family: $norm500;
+    color: #858585;
+    line-height: 1.515;
+    text-align: center;
+    width: 225px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+  }
+
+  &-message {
+    font-size: 11px;
+    font-family: $norm500;
+    color: #18191d;
+    line-height: 1.818;
+    text-align: center;
+    padding-bottom: 32px;
+
+    &-continuation {
+      display: none;
+    }
+
+    &-link {
+      display: inline;
+      text-decoration: underline;
+      color: #ff6b08;
+    }
+  }
+}
+
+.arrows {
+  width: 270px;
+  margin: 0 auto;
+  padding: 44px 0 80px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+}
+
+.left-arrows-reviews {
+  position: relative;
+  margin: 0 auto;
+}
+
+.left-arrows-reviews::before,
+.left-arrows-reviews::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right: 0;
+}
+
+.left-arrows-reviews {
+  width: 16px;
+  height: 2px;
+  background-color: #ff6b08;
+}
+
+.left-arrows-reviews::after {
+  top: -2px;
+  right: -5px;
+  border-left-color: #ff6b08;
+  border-width: 3px 0 3px 8px;
+}
+
+.right-arrows-reviews {
+  position: relative;
+  margin: 0 auto;
+}
+
+.right-arrows-reviews::before,
+.right-arrows-reviews::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-left: 0;
+}
+
+.right-arrows-reviews {
+  width: 16px;
+  height: 2px;
+  background-color: #ff6b08;
+}
+
+.right-arrows-reviews::after {
+  top: -2px;
+  right: 13px;
+  border-right-color: #ff6b08;
+  border-width: 3px 8px 3px 0;
+}
+
+.reviews__cards-title {
+  width: 184px;
+  margin: 0 auto;
+  position: absolute;
+  display: block;
+  content: '';
+  bottom: 54px;
+  right: 50px;
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-student {
+      width: 54px;
+
+      &:hover,
+      &:focus {
+        border: 2px solid #ff6b08;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.reviews__cards-title-list-student:nth-child(n + 4) {
+  display: none
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+
+  .reviews-title {
+    font-size: 26px;
+    font-family: $norm700;
+    line-height: 2.405;
+
+    &-id {
+      display: none;
+    }
+  }
+
+  .reviews-wrap {
+    display: flex;
+    position: relative;
+  }
+
+  .reviews__card-student {
+    width: 688px;
+    padding: 0;
+    margin-bottom: 153px;
+
+    &-photo {
+      padding: 62px 0 14px;
+    }
+
+    &-profile {
+      width: 160px;
+    }
+
+    &-social {
+      width: 160px;
+      margin-bottom: 40px;
+    }
+
+    &-name {
+      font-size: 18px;
+      font-family: $norm800;
+      line-height: 1.62;
+      letter-spacing: 0.8px;
+      padding-top: 30px;
+      margin-bottom: 12px;
+    }
+
+    &-about {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      flex-direction: column;
+      width: 460px;
+      align-items: flex-start;
+    }
+
+    &-learned {
+      font-size: 13px;
+      line-height: 1.333;
+      text-align: left;
+      width: 434px;
+      margin: 0;
+      margin-bottom: 12px;
+    }
+
+    &-message {
+      font-size: 12px;
+      width: 465px;
+      text-align: left;
+      padding-bottom: 43px;
+
+      &-continuation {
+        display: initial;
+      }
+    }
+  }
+
+  .reviews__card-student-message-continuation {
+    direction: initial;
+  }
+
+  .arrows {
+    width: 704px;
+    position: absolute;
+    bottom: 60px;
+    left: -9px;
+  }
+
+  .left-arrows-reviews {
+    width: 20px;
+  }
+
+  .left-arrows-reviews::after {
+    top: -3px;
+    border-width: 4px 0 4px 10px;
+  }
+
+  .right-arrows-reviews {
+    width: 20px;
+  }
+
+  .right-arrows-reviews::after {
+    top: -3px;
+    border-width: 4px 10px 4px 0;
+  }
+
+  .reviews__cards-title {
+    width: 505px;
+    bottom: -78px;
+    right: 102px;
+  }
+
+  .reviews__cards-title-list-student:nth-child(n + 4) {
+    display: initial;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    width: 1210px;
+  }
+
+  .reviews-title {
+    font-size: 42px;
+    line-height: 1.489;
+  }
+
+  .reviews__card-student {
+    width: 1065px;
+    margin-bottom: 192px;
+
+    &-photo {
+      display: none;
+
+      &-desktop {
+        display: initial;
+        width: 145px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &-profile {
+      width: 145px;
+      padding-top: 47px;
+      margin: 0 34px 0 86px;
+    }
+
+    &-social {
+      width: 145px;
+      margin-bottom: 100px;
+    }
+
+    &-name {
+      font-size: 25px;
+      line-height: 1.167;
+      padding-top: 41px;
+      margin-bottom: 0;
+    }
+
+    &-learned {
+      font-size: 12.5px;
+    }
+    
+    &-message {
+      font-size: 16.667px;
+      line-height: 1.75;
+      width: 700px;
+      padding-bottom: 38px;
+    }
+  }
+
+  .arrows {
+    width: 1180px;
+    bottom: 92px;
+    left: 16px;
+  }
+
+  .left-arrows-reviews {
+    width: 25px;
+  }
+
+  .left-arrows-reviews::after {
+    top: -4px;
+    border-width: 5px 0 5px 10px;
+  }
+
+  .right-arrows-reviews {
+    width: 25px;
+  }
+
+  .right-arrows-reviews::after {
+    top: -4px;
+    right: 20px;
+    border-width: 5px 10px 5px 0;
+  }
+
+  .reviews__cards-title {
+    width: 594px;
+    bottom: -94px;
+    right: 308px;
+  }
+}
